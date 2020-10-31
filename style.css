@@ -16,16 +16,23 @@ button {
   outline: none;
 }
 
+img,
+button {
+  cursor: pointer;
+}
+
 .content {
-  max-width: 1200px;
+  max-width: 1170px;
   margin: 0 auto;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 header#main-header {
   height: 46px;
   background: #fff;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
 }
 
 header#main-header .content {
@@ -48,6 +55,7 @@ header#main-header nav ul li {
   color: #667580;
   font-weight: bold;
   margin-left: 30px;
+  cursor: pointer;
 }
 
 header#main-header nav ul li:first-child {
@@ -83,6 +91,14 @@ header#main-header div.side button {
   font-size: 14px;
   border: 0;
   border-radius: 16px;
+
+  transition: all 0.2s ease;
+}
+
+header#main-header div.side button:hover {
+  background: #fff;
+  color: #3bb9e3;
+  border: 1px solid #3bb9e3;
 }
 
 header#main-header div.side input {
@@ -96,4 +112,105 @@ header#main-header div.side input {
   font-weight: 500;
 
   background: #f5f8fa url('/images/search.svg') no-repeat 190px center;
+}
+
+div.banner {
+  height: 380px;
+  width: 100%;
+  background: #3bb9e3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+div.banner h1 {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+div.bar {
+  height: 59px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+
+div.bar .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 285px;
+  height: 100%;
+}
+
+div.bar ul {
+  display: flex;
+  list-style: none;
+  height: 100%;
+}
+
+div.bar .content ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 15px;
+  position: relative;
+}
+
+div.bar .content ul li.active::after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #3bb9e3;
+}
+
+div.bar .content ul li span {
+  color: #667580;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+div.bar .content ul li strong {
+  color: #667580;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 2px;
+}
+
+div.bar .content ul li.active strong {
+  color: #3bb9e3;
+}
+
+div.bar .content .actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div.bar .content .actions button {
+  background: #fff;
+  color: #3bb9e3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  font-weight: bold;
+  font-size: 14px;
+  height: 34px;
+  border: 1px solid #3bb9e3;
+  border-radius: 16px;
+  margin-right: 20px;
+
+  transition: all 0.2s ease;
+}
+
+div.bar .content .actions button:hover {
+  background: #3bb9e3;
+  color: #fff;
 }
